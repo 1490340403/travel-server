@@ -1,0 +1,48 @@
+<!--
+ * @Author: 陈刚强
+ * @Email: 1490340403@qq.com
+ * @Date: 2020-12-10 15:37:57
+ * @LastAuthor: 陈刚强
+ * @LastTime: 2020-12-11 16:07:59
+ * @message: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+</head>
+<body>
+  <%= title %>
+  <button onclick="login()">登录</button>
+  <button onclick="loyout()">退出</button>
+  <br/>
+  姓名:<%= username %><br/>
+  session :<%= sessionUserName %>
+  <script>
+    function loyout(){
+      fetch('http://localhost:7001/loyout').then(
+        location.reload()
+      )
+    }
+    function login() {
+      fetch('http://localhost:7001/login',
+        {
+          method:'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body:JSON.stringify({
+            username:'小白',
+            pas:'123456'
+          })
+        }
+      ).then(function(response) {
+        location.reload()
+  console.log(response);
+})
+    }
+  </script>
+</body>
+</html>
