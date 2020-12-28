@@ -3,7 +3,7 @@
  * @Email: 1490340403@qq.com
  * @Date: 2020-12-10 14:18:06
  * @LastAuthor: 陈刚强
- * @LastTime: 2020-12-25 13:56:36
+ * @LastTime: 2020-12-28 16:53:45
  * @message: 
  * 
  */
@@ -46,7 +46,7 @@ class UserController extends BaseController{
     const token = app.jwt.sign({
       id:user.id,
       username: user.username
-    }, app.config.jwt.secret);
+    }, app.config.jwt.secret,{expiresIn:'1h'});
     //ctx.session.token=token
     app.redis.set('username', token, 'EX', app.config.redisExpire)
     const res=ctx.helper.unPick(user.dataValues,'password')

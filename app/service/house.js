@@ -3,7 +3,7 @@
  * @Email: 1490340403@qq.com
  * @Date: 2020-12-25 14:49:03
  * @LastAuthor: 陈刚强
- * @LastTime: 2020-12-25 16:45:04
+ * @LastTime: 2020-12-28 13:52:27
  * @message: 
  */
 const Service = require('egg').Service
@@ -16,7 +16,7 @@ class HouseService extends Service {
         
       },
       limit:4
-    })
+    }) 
     return result
   }
   async search(params){

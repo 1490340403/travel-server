@@ -3,7 +3,7 @@
  * @Email: 1490340403@qq.com
  * @Date: 2020-12-10 14:10:02
  * @LastAuthor: 陈刚强
- * @LastTime: 2020-12-25 13:50:22
+ * @LastTime: 2020-12-28 16:22:45
  * @message: 
  */
 /* eslint valid-jsdoc: "off" */
@@ -95,7 +95,7 @@ config.redis = {
 config.jwt = {
   secret: '123456',
 };
-exports.session = {
+config.session = {
   key: 'EGG_SESS',  //eggjs默认session的key
   maxAge: 24 * 3600 * 1000,  // 1 day
   httpOnly: true,
