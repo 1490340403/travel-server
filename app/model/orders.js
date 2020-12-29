@@ -1,3 +1,11 @@
+/*
+ * @Author: 陈刚强
+ * @Email: 1490340403@qq.com
+ * @Date: 2020-12-25 15:33:22
+ * @LastAuthor: 陈刚强
+ * @LastTime: 2020-12-29 15:37:51
+ * @message: 
+ */
 module.exports = app => {
   const { STRING, INTEGER, DATE } = app.Sequelize;
 
@@ -7,7 +15,7 @@ module.exports = app => {
       primaryKey: true,
       autoIncrement: true
     },
-    orderNumber: STRING(20),
+    order_number: STRING(20),
     userId: INTEGER,
     houseId: INTEGER,
     isPayed: {

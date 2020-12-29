@@ -3,7 +3,7 @@
  * @Email: 1490340403@qq.com
  * @Date: 2020-12-25 14:47:12
  * @LastAuthor: 陈刚强
- * @LastTime: 2020-12-25 16:16:03
+ * @LastTime: 2020-12-29 15:07:48
  * @message: 
  */
 const BaseController=require('./base')
@@ -20,7 +20,6 @@ class HouseController extends BaseController {
   async search(){
     const {ctx}=this
     const params=ctx.params()
-    console.log(params,'params')
     const result=await ctx.service.house.search(params)
     if(result){
       this.success(result)
@@ -28,5 +27,6 @@ class HouseController extends BaseController {
       this.error('没有数据')
     }
   }
+
 }
 module.exports=HouseController

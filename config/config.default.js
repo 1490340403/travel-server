@@ -3,7 +3,7 @@
  * @Email: 1490340403@qq.com
  * @Date: 2020-12-10 14:10:02
  * @LastAuthor: 陈刚强
- * @LastTime: 2020-12-28 16:22:45
+ * @LastTime: 2020-12-29 13:16:02
  * @message: 
  */
 /* eslint valid-jsdoc: "off" */
@@ -39,7 +39,7 @@ module.exports = appInfo => {
       enable: false,
       ignoreJSON: true,
     },
-    //domainWhiteList: [ 'http://localhost:8001/' ], // 配置白名单
+    domainWhiteList: [ 'http://localhost:8001/' ], // 配置白名单
   }
   config.cors = {
     // origin: '*', //允许所有跨域访问，注释掉则允许上面 白名单 访问
